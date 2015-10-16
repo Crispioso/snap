@@ -1,0 +1,52 @@
+//_nav.scss
+
+//Primary nav on the page
+.nav {
+
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: ($baseline * 8);
+	border-bottom: 1px solid $iron-light;
+	background-color: $background;
+	z-index: 100;
+	
+	&__list {
+		margin: 0;
+		padding-left: 0;
+	}
+
+	&__item {
+		margin-top: ($baseline * 2);
+		padding-bottom: 0;
+	}
+
+	&__link {
+		padding-bottom: ($baseline * 2);
+		display: inline-block;
+		color: $thunder;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		&--active {
+			border-bottom: 2px solid $logo;
+		}
+	}
+
+	&__logo {
+		padding: $baseline 0 0 0;
+		margin: 0;
+		font-family: $luckiest-font-family;
+		font-size: 32px;
+
+		a {
+			border-bottom: 0;
+			color: $logo;
+		}
+
+	}
+
+}
