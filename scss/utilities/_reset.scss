@@ -20,6 +20,7 @@ html, body {
 
 body {
 	background-color: white;
+	min-height: 5000px;
 
 	@if $old-ie == true {
 		min-width: 960px;

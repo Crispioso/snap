@@ -32,6 +32,7 @@
 		}
 
 		&--active {
+			height: ($baseline * 5);
 			border-bottom: 2px solid $logo;
 		}
 	}
