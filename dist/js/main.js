@@ -43,20 +43,25 @@ $( document ).ready(function(){
 				var navLink = '#' + heading[index];
 
 				//If scroll position equal or more than heading position add class. If last in array and scroll position more then add class. Else remove class.
+				//TODO store reused functions
 				if (winScroll == 0) {
 					$('a[href="#home"]').css('color', '#551A8B');
+					$('.nav__subtitle').slideDown("fast");
 
 				} else if( winScroll >= headingPos[index] && winScroll < headingPos[index+1] ){
 					$('a[href="' + navLink + '"]').addClass('nav__link--active');
-					$('a[href="#home"]').css('color', '#323132');
+					$('a[href="#home"]').css('color', '#414042');
+					$('.nav__subtitle').slideUp("fast");
 
 				} else if( winScroll >= headingPos[index] && index == heading.length-1 ) {
 					$('a[href="' + navLink + '"]').addClass('nav__link--active');
-					$('a[href="#home"]').css('color', '#323132');
+					$('a[href="#home"]').css('color', '#414042');
+					//$('.nav__subtitle').hide("slow");
 
 				} else {
 					$('a[href="' + navLink + '"]').removeClass('nav__link--active');
-					$('a[href="#home"]').css('color', '#323132');
+					$('a[href="#home"]').css('color', '#414042');
+					//$('.nav__subtitle').hide("slow");
 				}
 			}
 		}
@@ -94,7 +99,7 @@ $( document ).ready(function(){
 				//Animated scroll to location
 				if (target == '#home' ) {
 					//Go to absolute top of page if clicking 'home'
-					$('html, body').animate({scrollTop: $(target).offset().top - 124}, 1000, function(){
+					$('html, body').animate({scrollTop: $(target).offset().top - 88}, 1000, function(){
 						location.hash = target;
 					});
 				} else {

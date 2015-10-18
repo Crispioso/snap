@@ -70,7 +70,11 @@
 			color: $logo;
 
 		}
+	}
 
+	&__subtitle {
+		margin: 0;
+		display: block;
 	}
 
 }
