@@ -20,8 +20,9 @@
 	&__item {
 		//margin-top: ($baseline * 2);
 		padding-top: ($baseline * 2) + 6px;
-		padding-bottom: 0;
+		padding-bottom: 2px;
 		padding-left: 0;
+		margin-bottom: -2px;
 		text-align: center;
 		display: block;
 
@@ -32,6 +33,7 @@
 
 		&--logo {
 			padding: 0;
+			margin: 0;
 		}
 	}
 
@@ -45,7 +47,7 @@
 		}
 
 		&--active {
-			height: ($baseline * 5);
+			//height: ($baseline * 5);
 			border-bottom: 2px solid $logo;
 
 			//animations
@@ -75,6 +77,11 @@
 	&__subtitle {
 		margin: 0;
 		display: block;
+		font-size: 17px;
+
+		&--strong {
+			font-weight: bold;
+		}
 	}
 
 }
