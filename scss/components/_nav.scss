@@ -14,15 +14,15 @@
 	
 	&__list {
 		margin: 0;
-		padding-left: 0;
+		padding: 2px 0 0 0;
 	}
 
 	&__item {
 		//margin-top: ($baseline * 2);
-		padding-top: ($baseline * 2) + 6px;
+		padding-top: ($baseline * 3);
 		padding-bottom: 2px;
 		padding-left: 0;
-		margin-bottom: -2px;
+		margin: 36px 0 -2px 0;
 		text-align: center;
 		display: block;
 
@@ -34,6 +34,14 @@
 		&--logo {
 			padding: 0;
 			margin: 0;
+		}
+
+		&--shrunk {
+			margin: 0 0 -2px 0;
+			-webkit-transition: all 0.3s ease;
+			-moz-transition: all 0.3s ease;
+			-o-transition: all 0.3s ease;
+			-ms-transition: all 0.3s ease;
 		}
 	}
 
@@ -62,12 +70,24 @@
 		padding: ($baseline + 4px) 0 0 0;
 		margin: 0;
 		font-family: $luckiest-font-family;
-		font-size: 32px;
+		font-size: 40px;
 		text-align: left;
+		-webkit-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		-ms-transition: all 0.3s ease;
+
+		&--shrunk {
+			font-size: 32px;
+			-webkit-transition: all 0.3s ease;
+			-moz-transition: all 0.3s ease;
+			-o-transition: all 0.3s ease;
+			-ms-transition: all 0.3s ease;
+		}
 
 		a {
-			height: ($baseline * 6);
-			padding-bottom: 0;
+			//height: ($baseline * 6);
+			padding: 12px 0 0 0;
 			//border-bottom: 2px solid $logo;
 			color: $logo;
 

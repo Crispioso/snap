@@ -27,7 +27,7 @@ $( document ).ready(function(){
 		$('h2').each(function(index){
 			heading[index] = $(this).attr('id');
 
-			headingPos[index] = $('#' + heading[index]).offset().top - 76;
+			headingPos[index] = $('#' + heading[index]).offset().top - 100;
 		});
 
 		//Current scroll position on page
@@ -44,14 +44,22 @@ $( document ).ready(function(){
 
 				//If scroll position equal or more than heading position add class. If last in array and scroll position more then add class. Else remove class.
 				//TODO store reused functions
-				if (winScroll == 0) {
+				if (winScroll < headingPos[0] || winScroll == 0) {
 					$('a[href="#home"]').css('color', '#551A8B');
+					$('a[href="' + navLink + '"]').removeClass('nav__link--active');
 					$('.nav__subtitle').slideDown("fast");
+					$('.nav__logo').removeClass('nav__logo--shrunk');
+					$('.nav__item').removeClass('nav__item--shrunk');
 
 				} else if( winScroll >= headingPos[index] && winScroll < headingPos[index+1] ){
 					$('a[href="' + navLink + '"]').addClass('nav__link--active');
 					$('a[href="#home"]').css('color', '#414042');
 					$('.nav__subtitle').slideUp("fast");
+					$('.nav__logo').addClass('nav__logo--shrunk');
+					$('.nav__item').addClass('nav__item--shrunk');
+					// $('.nav__logo').animate({fontSize : '32px'}, 200, function(){
+					// 	console.log("Font-size = 32px");
+					// });
 
 				} else if( winScroll >= headingPos[index] && index == heading.length-1 ) {
 					$('a[href="' + navLink + '"]').addClass('nav__link--active');
@@ -124,7 +132,7 @@ $( document ).ready(function(){
 			//Animated scroll to location
 			if (target == '#home' ) {
 				//Go to absolute top of page if clicking 'home'
-				$('html, body').animate({scrollTop: $(target).offset().top - 124}, 1000, function(){
+				$('html, body').animate({scrollTop: $(target).offset().top - 88}, 1000, function(){
 					location.hash = target;
 				});
 			} else {
