@@ -24,10 +24,11 @@ $( document ).ready(function(){
 		var headingPos = []
 
 		//Loop to get id attribute of each heading 2
-		$('h2').each(function(index){
+		$('h2[id]').each(function(index){
 			heading[index] = $(this).attr('id');
+			console.log(heading[index]);
 
-			headingPos[index] = $('#' + heading[index]).offset().top - 100;
+			headingPos[index] = $('#' + heading[index]).offset().top - 80;
 		});
 
 		//Current scroll position on page
@@ -104,14 +105,16 @@ $( document ).ready(function(){
 				//Get hash part of href from anchor
 				var target = location.hash;
 
+				//console.log(target);
+
 				//Animated scroll to location
 				if (target == '#home' ) {
 					//Go to absolute top of page if clicking 'home'
-					$('html, body').animate({scrollTop: $(target).offset().top - 88}, 1000, function(){
+					$('html, body').animate({scrollTop: $(target).offset().top - 80}, 1000, function(){
 						location.hash = target;
 					});
 				} else {
-					$('html, body').animate({scrollTop: $(target).offset().top - 70}, 1000, function(){
+					$('html, body').animate({scrollTop: $(target).offset().top - 96}, 1000, function(){
 						location.hash = target;
 					});
 				};

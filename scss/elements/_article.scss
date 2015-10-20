@@ -1,5 +1,7 @@
 //_article.scss
 
 .article {
-	padding: ($baseline * 8) $col 0 $col;
+	padding: 0;
+	margin-left: $col;
+	//margin-top: ($baseline * 12);
 }

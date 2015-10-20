@@ -3,10 +3,32 @@ section {
 }
 
 .section {
+	
+	padding: $baseline $col;
+	//background-color: ;
+
+	&--side {
+		background-color: #DDD1E7;
+		//color: $iron;
+		padding: 0;
+		margin-top: $baseline * 4;
+	}
 
 	&__title {
 		margin-top: $baseline * 6;
 		margin-bottom: 0;
+
+		&:first-child {
+			margin-top: $baseline * 2;
+		}
+
+		&--side {
+			background-color: #bba3d0;
+			padding: ($baseline * 2) $col;
+			min-height: $baseline * 8;
+			border-bottom: 2px solid #aa8cc5;
+			margin-bottom: -2px;
+		}
 	}
 
 	&__subtitle {
@@ -62,6 +84,10 @@ section {
 				margin-top: ($baseline * 2);
 			}
 
+		}
+
+		&--side {
+			padding: $baseline $col;
 		}
 
 	}
