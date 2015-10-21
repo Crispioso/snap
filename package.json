@@ -25,7 +25,6 @@
 		"uglify-js": "latest"
 	},
 	"devDependencies": {
-		"express": "latest",
 		"catw": "latest",
 		"onchange": "latest"
 	}
