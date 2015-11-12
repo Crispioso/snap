@@ -4,8 +4,18 @@ section {
 
 .section {
 	
-	padding: $baseline $col;
-	//background-color: ;
+	padding: ($baseline * 3) 0;
+	position: relative;
+	
+	&:after {
+		content: "";
+		border-bottom: 1px solid $aluminium;
+		width: 50%;
+		left: 25%;
+		position: absolute;
+		margin-top: $baseline * 3;
+
+	}
 
 	&--side {
 		background-color: #DDD1E7;
@@ -16,7 +26,7 @@ section {
 
 	&__title {
 		margin-top: $baseline * 6;
-		margin-bottom: 0;
+		margin-bottom: $baseline * 2;
 
 		&:first-child {
 			margin-top: $baseline * 2;

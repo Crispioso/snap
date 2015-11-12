@@ -28,7 +28,7 @@ $( document ).ready(function(){
 			heading[index] = $(this).attr('id');
 			console.log(heading[index]);
 
-			headingPos[index] = $('#' + heading[index]).offset().top - 80;
+			headingPos[index] = $('#' + heading[index]).offset().top - 96;
 		});
 
 		//Current scroll position on page
@@ -46,7 +46,7 @@ $( document ).ready(function(){
 				//If scroll position equal or more than heading position add class. If last in array and scroll position more then add class. Else remove class.
 				//TODO store reused functions
 				if (winScroll < headingPos[0] || winScroll == 0) {
-					$('a[href="#home"]').css('color', '#551A8B');
+					// $('a[href="#home"]').css('color', '#551A8B');
 					$('a[href="' + navLink + '"]').removeClass('nav__link--active');
 					$('.nav__subtitle').slideDown("fast");
 					$('.nav__logo').removeClass('nav__logo--shrunk');
@@ -54,7 +54,7 @@ $( document ).ready(function(){
 
 				} else if( winScroll >= headingPos[index] && winScroll < headingPos[index+1] ){
 					$('a[href="' + navLink + '"]').addClass('nav__link--active');
-					$('a[href="#home"]').css('color', '#414042');
+					// $('a[href="#home"]').css('color', '#414042');
 					$('.nav__subtitle').slideUp("fast");
 					$('.nav__logo').addClass('nav__logo--shrunk');
 					$('.nav__item').addClass('nav__item--shrunk');
@@ -64,12 +64,12 @@ $( document ).ready(function(){
 
 				} else if( winScroll >= headingPos[index] && index == heading.length-1 ) {
 					$('a[href="' + navLink + '"]').addClass('nav__link--active');
-					$('a[href="#home"]').css('color', '#414042');
+					// $('a[href="#home"]').css('color', '#414042');
 					//$('.nav__subtitle').hide("slow");
 
 				} else {
 					$('a[href="' + navLink + '"]').removeClass('nav__link--active');
-					$('a[href="#home"]').css('color', '#414042');
+					// $('a[href="#home"]').css('color', '#414042');
 					//$('.nav__subtitle').hide("slow");
 				}
 			}
@@ -110,11 +110,11 @@ $( document ).ready(function(){
 				//Animated scroll to location
 				if (target == '#home' ) {
 					//Go to absolute top of page if clicking 'home'
-					$('html, body').animate({scrollTop: $(target).offset().top - 80}, 1000, function(){
+					$('html, body').animate({scrollTop: $(target).offset().top - 96}, 1000, function(){
 						location.hash = target;
 					});
 				} else {
-					$('html, body').animate({scrollTop: $(target).offset().top - 96}, 1000, function(){
+					$('html, body').animate({scrollTop: $(target).offset().top - 120}, 1000, function(){
 						location.hash = target;
 					});
 				};
@@ -135,11 +135,11 @@ $( document ).ready(function(){
 			//Animated scroll to location
 			if (target == '#home' ) {
 				//Go to absolute top of page if clicking 'home'
-				$('html, body').animate({scrollTop: $(target).offset().top - 88}, 1000, function(){
+				$('html, body').animate({scrollTop: $(target).offset().top - 136}, 1000, function(){
 					location.hash = target;
 				});
 			} else {
-				$('html, body').animate({scrollTop: $(target).offset().top - 70}, 1000, function(){
+				$('html, body').animate({scrollTop: $(target).offset().top - 96}, 1000, function(){
 					location.hash = target;
 				});
 			};
